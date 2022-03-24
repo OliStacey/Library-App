@@ -1,18 +1,32 @@
 package com.qa.entity;
 
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity //this will create book as a table
 public class Book {
 	
+	@Id // creates primary key of table
+	@GeneratedValue(strategy = GenerationType.IDENTITY) // this will auto increments  the id
 	private int id;
+	
+	
 	private String title;
+	
 	private String publisher;
 	private String dateOfPublication;
 	private String genre;
 	private int numOfPages;
 	
+	public Book() {}
 	
-	public Book(int id, String title, String publisher, String dateOfPublication, String genre, int numOfPages) {
+	
+	public Book(String title, String publisher, String dateOfPublication, String genre, int numOfPages) {
 		super();
-		this.id = id;
+		
 		this.title = title;
 		this.publisher = publisher;
 		this.dateOfPublication = dateOfPublication;

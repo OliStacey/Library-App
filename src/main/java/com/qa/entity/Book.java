@@ -17,7 +17,7 @@ public class Book {
 	private String title;
 	
 	private String publisher;
-	private String dateOfPublication;
+	private String dateOfPublication; 
 	private String genre;
 	private int numOfPages;
 	
